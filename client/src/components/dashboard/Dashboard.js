@@ -19,18 +19,17 @@ const Dashboard = ({
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Dashboard</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Welcome {user && user.name}
-      </p>
+      <section className="container container--modifier dashboard">
+      <h1 className="title__app text-primary fadeInDown">Dashboard </h1>
+      <p className="subtitle__app fadeInDown"><i className="bx bxs-user"></i>Welcome {user && user.name}</p>
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
           <Experience experience={profile.experience} />
           <Education education={profile.education} />
 
-          <div className="my-2">
-            <button className="btn btn-danger" onClick={() => deleteAccount()}>
+          <div className="dashboar__delete">
+            <button className="btn  btn__danger" onClick={() => deleteAccount()}>
               <i className="fas fa-user-minus" /> Delete My Account
             </button>
           </div>
@@ -38,11 +37,12 @@ const Dashboard = ({
       ) : (
         <Fragment>
           <p>You have not yet setup a profile, please add some info</p>
-          <Link to="/create-profile" className="btn btn-primary my-1">
+          <Link to="/create-profile" className="btn btn__primary">
             Create Profile
           </Link>
         </Fragment>
       )}
+      </section>
     </Fragment>
   );
 };

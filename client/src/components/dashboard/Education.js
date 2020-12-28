@@ -15,7 +15,7 @@ const Education = ({ education, deleteEducation }) => {
       <td>
         <button
           onClick={() => deleteEducation(edu._id)}
-          className="btn btn-danger"
+          className="btn btn__danger"
         >
           Delete
         </button>
@@ -25,7 +25,7 @@ const Education = ({ education, deleteEducation }) => {
 
   return (
     <Fragment>
-      <h2 className="my-2">Education Credentials</h2>
+      <h2 className="subtitle__app fadeInDown">Education Credentials</h2>
       <table className="table">
         <thead>
           <tr>

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
+import BtnPrimary from '../Constants/buttons'
 import PropTypes from 'prop-types';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
@@ -33,56 +34,59 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign Up</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Create Your Account
-      </p>
-      <form className="form" onSubmit={onSubmit}>
-        <div className="form-group">
+      <section className="form container ">
+      <h1 className="title__app text-primary fadeInDown">Sign Up</h1>
+      <p className="subtitle__app fadeInDown"><i className="bx bxs-user"></i>Create your acount</p>
+      <form className="form__box" onSubmit={onSubmit}>
+        
           <input
+           className="form__box--input"
             type="text"
             placeholder="Name"
             name="name"
             value={name}
             onChange={onChange}
           />
-        </div>
-        <div className="form-group">
+        
+        
           <input
+           className="form__box--input"
             type="email"
             placeholder="Email Address"
             name="email"
             value={email}
             onChange={onChange}
           />
-          <small className="form-text">
+
+          <small className="form__text">
             This site uses Gravatar so if you want a profile image, use a
             Gravatar email
           </small>
-        </div>
-        <div className="form-group">
+        
+        
           <input
+             className="form__box--input"
             type="password"
             placeholder="Password"
             name="password"
             value={password}
             onChange={onChange}
           />
-        </div>
-        <div className="form-group">
+        
+        
           <input
+           className="form__box--input"
             type="password"
             placeholder="Confirm Password"
             name="password2"
             value={password2}
             onChange={onChange}
           />
-        </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        
+        <BtnPrimary title='Register'/>
       </form>
-      <p className="my-1">
-        Already have an account? <Link to="/login">Sign In</Link>
-      </p>
+      <p>Already have an account ? <Link to="/login" className="text-primary" >Sign In</Link></p>
+      </section>
     </Fragment>
   );
 };
