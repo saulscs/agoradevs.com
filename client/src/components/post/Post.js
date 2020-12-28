@@ -17,9 +17,8 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <Link to="/posts" className="btn">
-        Back To Posts
-      </Link>
+      <section class="container container--modifier">
+      <div class="post__grid">
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
       <div className="comments">
@@ -27,6 +26,8 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
           <CommentItem key={comment._id} comment={comment} postId={post._id} />
         ))}
       </div>
+      </div>
+      </section>
     </Fragment>
   );
 };

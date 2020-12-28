@@ -9,13 +9,19 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
   }, [getGithubRepos, username]);
 
   return (
-    <div className="profile-github">
-      <h2 className="text-primary my-1">Github Repos</h2>
+    <div className="profile__github">
+      <h2 className="text-primary">
+        <i className="bx bxl-github"></i>Github Repos
+      </h2>
       {repos.map(repo => (
-        <div key={repo.id} className="repo bg-white p-1 my-1">
+        <div key={repo.id} className="bgCard bgCard--modifier repo">
           <div>
             <h4>
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+              <a 
+                className="text-primary" 
+                href={repo.html_url} 
+                target="_blank" 
+                rel="noopener noreferrer">
                 {repo.name}
               </a>
             </h4>

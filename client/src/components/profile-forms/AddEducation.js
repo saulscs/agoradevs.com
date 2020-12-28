@@ -32,7 +32,7 @@ const AddEducation = ({ addEducation, history }) => {
     <Fragment>
       <section  className="container container--modifier dashboard">
       <h1 className="title__app text-primary fadeInDown">Add Your Education   </h1>
-            <p className="subtitle__app fadeInDown"><i class="fas fa-code-branch"></i> Add any school or bootcamp that you have attended</p>
+            <p className="subtitle__app fadeInDown"><i className="fas fa-code-branch"></i> Add any school or bootcamp that you have attended</p>
             <small>* = required field</small>
       <form
         className="form__box form__box--modifier"

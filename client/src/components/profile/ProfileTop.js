@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types';
 
 const ProfileTop = ({
@@ -12,14 +13,16 @@ const ProfileTop = ({
   }
 }) => {
   return (
-    <div className="profile-top bg-primary p-2">
-      <img className="round-img my-1" src={avatar} alt="" />
+    <div className="profile__hero profiles__card bgCard bgCard--modifier">
+     <div><img src={avatar} alt="" /></div>
+     <div className="profile__hero--intro">
       <h1 className="large">{name}</h1>
       <p className="lead">
         {status} {company && <span> at {company}</span>}
       </p>
       <p>{location && <span>{location}</span>}</p>
-      <div className="icons my-1">
+     </div>
+      <div className="profile__hero--social">
         {website && (
           <a href={website} target="_blank" rel="noopener noreferrer">
             <i className="fas fa-globe fa-2x" />
@@ -38,6 +41,11 @@ const ProfileTop = ({
                 <i className={`fab fa-${key} fa-2x`}></i>
               </a>
             ))}
+      </div>
+      <div className="profile__hero--more">
+        <a href="#" target="blank" rel="noopener noreferrer">320 Conections</a>
+        <a href="#" target="blank" rel="noopener noreferrer">More</a>
+        <Link to="/edit-profile">Edit Profile </Link>    
       </div>
     </div>
   );

@@ -12,11 +12,12 @@ import Profile from '../profile/Profile';
 import Posts from '../posts/Posts';
 import Post from '../post/Post';
 import NotFound from '../layout/NotFound';
+import FooterApp from '../Constants/FooterApp'
 import PrivateRoute from '../routing/PrivateRoute';
 
 const Routes = props => {
   return (
-    <section className="container">
+    <section>
       <Alert />
       <Switch>
         <Route exact path="/register" component={Register} />
@@ -32,6 +33,7 @@ const Routes = props => {
         <PrivateRoute exact path="/posts/:id" component={Post} />
         <Route component={NotFound} />
       </Switch>
+      <FooterApp/>
     </section>
   );
 };

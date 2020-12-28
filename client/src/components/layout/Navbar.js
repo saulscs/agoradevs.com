@@ -4,7 +4,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 
-const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+const Navbar = ({ 
+    auth: { isAuthenticated, loading }, 
+    logout, 
+}) => {
   const [isActive, SetIsACtive] = useState(false);
 
   const authLinks = (
@@ -15,16 +18,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
                     <span>Posts</span>
             </Link>
         </li>
+        
         <li>
-            <Link to="/post" className="navbar__links navbar__item">
-                    <i className="bx bxs-plus-circle hide-sm"></i>{''}
-                    <span>Post</span>
-            </Link>
-        </li>
-        <li>
-            <Link to="/profile" className="navbar__links navbar__item">
+            <Link to="/profiles" className="navbar__links navbar__item">
                     <i className="bx bxs-user-circle hide-sm" ></i>{''}
-                    <span>Profile</span>
+                    <span>Developers</span>
             </Link>
         </li>
         <li>
@@ -82,7 +80,7 @@ return (
 
 Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({

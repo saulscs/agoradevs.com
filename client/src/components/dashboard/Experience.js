@@ -9,7 +9,7 @@ const Experience = ({ experience, deleteExperience }) => {
     <tr key={exp._id}>
       <td>{exp.company}</td>
       <td className="hide-sm">{exp.title}</td>
-      <td>
+      <td className="hide-sm">
         {formatDate(exp.from)} - {exp.to ? formatDate(exp.to) : 'Now'}
       </td>
       <td>

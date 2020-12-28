@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import PostItem from './PostItem';
 import PostForm from './PostForm';
+import Sidebar from '../profile/Sidebar'
 import { getPosts } from '../../actions/post';
 
 const Posts = ({ getPosts, post: { posts } }) => {
@@ -12,15 +13,16 @@ const Posts = ({ getPosts, post: { posts } }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Posts</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Welcome to the community
-      </p>
-      <PostForm />
-      <div className="posts">
-        {posts.map((post) => (
-          <PostItem key={post._id} post={post} />
-        ))}
+      <div className="profile__wrapper">
+        <Sidebar/>
+        <section class="container container--modifier posts">
+          <PostForm />
+          <div class="posts__grid">
+            {posts.map((post) => (
+              <PostItem key={post._id} post={post} />
+            ))}
+          </div>
+        </section>
       </div>
     </Fragment>
   );

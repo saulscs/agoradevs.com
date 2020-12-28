@@ -16,12 +16,10 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className='large text-primary'>Developers</h1>
-          <p className='lead'>
-            <i className='fab fa-connectdevelop' /> Browse and connect with
-            developers
-          </p>
-          <div className='profiles'>
+          <section className="container profiles">  
+          <h1 className="title__app text-primary fadeInDown">Developers</h1>
+          <p className="subtitle__app fadeInDown"><i className="bx bxs-network-chart"></i>Browse and conncect with developers</p>
+          <div className="profiles__section">
             {profiles.length > 0 ? (
               profiles.map(profile => (
                 <ProfileItem key={profile._id} profile={profile} />
@@ -30,6 +28,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
               <h4>No profiles found...</h4>
             )}
           </div>
+          </section>
         </Fragment>
       )}
     </Fragment>
