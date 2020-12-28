@@ -22,14 +22,13 @@ const AddExperience = ({ addExperience, history }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Add An Experience</h1>
-      <p className="lead">
-        <i className="fas fa-code-branch" /> Add any developer/programming
-        positions that you have had in the past
-      </p>
-      <small>* = required field</small>
+       <section  className="container container--modifier dashboard">
+       <h1 className="title__app text-primary fadeInDown">Add An Experience  </h1>
+            <p className="subtitle__app fadeInDown"><i className="fas fa-code-branch"></i> Add any developer/programming positions that you have had in the past 
+                profile stand out</p>
+            <small>* = required field</small>
       <form
-        className="form"
+        className="form__box form__box--modifier"
         onSubmit={e => {
           e.preventDefault();
           addExperience(formData, history);
@@ -37,6 +36,7 @@ const AddExperience = ({ addExperience, history }) => {
       >
         <div className="form-group">
           <input
+            className="form__box--input" 
             type="text"
             placeholder="* Job Title"
             name="title"
@@ -47,6 +47,7 @@ const AddExperience = ({ addExperience, history }) => {
         </div>
         <div className="form-group">
           <input
+            className="form__box--input" 
             type="text"
             placeholder="* Company"
             name="company"
@@ -57,6 +58,7 @@ const AddExperience = ({ addExperience, history }) => {
         </div>
         <div className="form-group">
           <input
+            className="form__box--input" 
             type="text"
             placeholder="Location"
             name="location"
@@ -71,6 +73,7 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <p>
             <input
+              className="form__box--input" 
               type="checkbox"
               name="current"
               checked={current}
@@ -85,6 +88,7 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <h4>To Date</h4>
           <input
+            className="form__box--input" 
             type="date"
             name="to"
             value={to}
@@ -94,6 +98,7 @@ const AddExperience = ({ addExperience, history }) => {
         </div>
         <div className="form-group">
           <textarea
+            className="form__box--input" 
             name="description"
             cols="30"
             rows="5"
@@ -102,11 +107,9 @@ const AddExperience = ({ addExperience, history }) => {
             onChange={onChange}
           />
         </div>
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
-          Go Back
-        </Link>
+        <button type="submit" className="btn btn__primary">Save</button>
       </form>
+       </section>
     </Fragment>
   );
 };
