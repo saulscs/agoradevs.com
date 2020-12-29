@@ -14,7 +14,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
         <i className="bx bxl-github"></i>Github Repos
       </h2>
       {repos.map(repo => (
-        <div key={repo.id} className="bgCard bgCard--modifier repo">
+        <div key={repo.id} className="mb-1x bgCard bgCard--modifier repo">
           <div>
             <h4>
               <a 
