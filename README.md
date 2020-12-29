@@ -1,5 +1,16 @@
 # agoradevs.com
 
+![](https://i.imgur.com/u1kZK7N.png)
+
+
+## Stack
+
+* React.js
+* Redux
+* Node.js
+* Express
+* MongoDB
+
 ## Frontend
 
 Go to this route  -> agoradevs.com/client/ 

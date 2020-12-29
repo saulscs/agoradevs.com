@@ -18,7 +18,7 @@ const  Testimony = () => {
                             <i className="bx bxl-google testimony__logo" ></i>
                             <div className="testimony__info">
                                 <h3 className="testimony__name">Andres García</h3>
-                                <p className="testimony__position">Director de google México</p>
+                                <p className="testimony__position">Google</p>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ const  Testimony = () => {
                             <i className="bx bxl-apple testimony__logo" ></i>
                             <div className="testimony__info">
                                 <h3 className="testimony__name">Andres García</h3>
-                                <p className="testimony__position">Director de Apple México</p>
+                                <p className="testimony__position">Apple</p>
                             </div>
                         </div>
                     </div>
@@ -37,14 +37,14 @@ const  Testimony = () => {
                     <div className="testimony__card">
                         <div className="testimony__text">
                             <img src={Google} alt="google logo" className="testimony__logo"/>
-                            <p className="testimony__story">Desde que empezamos a trabajar con Saúl Corona comenzamos a 
-                                tener resultados increibles. Ahora hemos llegado a una mayor cantidad de clientes potenciales.
+                            <p className="testimony__story">Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                             <div className="testimony__copy highlight testimony__copy--modifier">
                                 <img src={FirsPerson} alt="fp" className="testimony__card--img logo--picture"/>
                                 <div className="testimony__info">
                                     <h3 className="testimony__name">Andres García</h3>
-                                    <p className="testimony__position">Director de Apple México</p>
+                                    <p className="testimony__position">Google</p>
                                 </div>
                             </div>
                         </div>

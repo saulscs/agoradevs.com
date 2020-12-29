@@ -8,8 +8,8 @@ const  Hero = () => {
     <header className="hero">
         <section className="container hero__main">
             <div className="hero__content fadeIn">
-                <h1>NEXT GENERATION</h1>
-                <h2>TECHNOLOGY</h2>
+                <h1>DEVELOPERS</h1>
+                <h2>COMMUNITY</h2>
                 <p>See what makes up different</p>
                 <button className="button--cta" type="submit">
                     <Link to="/register">Get started</Link>

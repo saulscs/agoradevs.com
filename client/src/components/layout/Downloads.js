@@ -19,8 +19,8 @@ const Download = () => {
                         </div>
                     </div>
                     <div className="download__copy">
-                        <Link to="#" className="termsAndConditions termsAndConditions--margin">Politica de privacidad</Link>
-                        <Link to="#" className="termsAndConditions">Terminos y condiciones</Link>
+                        <Link to="#" className="termsAndConditions termsAndConditions--margin">Privacy Policy</Link>
+                        <Link to="#" className="termsAndConditions">User Agreement</Link>
                     </div>
                 </div>
 
